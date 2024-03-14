@@ -27,3 +27,29 @@ h5 {
   max-width: 800px;
   margin: 0 auto;
 }
+
+.main > * + * {
+  margin-top: 48px;
+}
+
+.main > * {
+  border-top: 15px solid rgb(180, 231, 240);
+}
+
+.main > *:first-child {
+  border-top: none;
+}
+
+.navlinks {
+  padding: 4px 8px;
+  color: black;
+  color: blue;
+}
+
+.navlinks:hover {
+  background-color: rgb(255, 255, 255);
+}
+
+.navlinks:active {
+  background-color: green;
+}
