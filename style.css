@@ -53,3 +53,12 @@ h5 {
 .navlinks:active {
   background-color: green;
 }
+
+::selection {
+  background-color: aqua;
+  color: darkblue;
+}
+
+.profession::after {
+  content: "👨‍💻";
+}
