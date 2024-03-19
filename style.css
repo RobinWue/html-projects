@@ -1,6 +1,11 @@
-* {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
-  font-family: "Times New Roman", Times, serif;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
 }
 
 .body {
