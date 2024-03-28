@@ -170,7 +170,7 @@ h5 {
 }
 
 .footer-link {
-  text-decoration: none;
+  text-decoration: underline;
   color: black;
   transition: background-color 0.3s;
 }
