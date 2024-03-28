@@ -39,8 +39,9 @@ h5 {
 .header {
   padding: 1rem 1rem;
   text-align: center;
-  background-color: rgb(180, 231, 240);
+  _background-color: rgb(38, 70, 83);
   padding-top: 4rem;
+  background: linear-gradient(to right, rgb(38, 70, 83), rgb(155, 155, 248));
 }
 
 .main {
@@ -54,7 +55,7 @@ h5 {
 }
 
 .main > * {
-  border-top: 1rem solid rgb(180, 231, 240);
+  border-top: 1rem solid rgb(38, 70, 83);
 }
 
 .main > *:first-child {
@@ -97,8 +98,8 @@ h5 {
 /*Navigations-Ende*/
 
 ::selection {
-  background-color: aqua;
-  color: darkblue;
+  background-color: rgb(33, 105, 105);
+  color: rgb(226, 230, 236);
 }
 
 .profession::after {
@@ -129,7 +130,7 @@ h5 {
   top: 0rem;
   right: 0rem;
   border: 0.2rem solid black;
-  background-color: tomato;
+  background-color: rgb(148, 173, 255);
   padding: 0.3rem;
 }
 
@@ -159,3 +160,27 @@ h5 {
 .main-header {
   font-size: 4rem;
 }
+
+/*Footer*/
+
+.footer {
+  background: linear-gradient(to right, rgb(38, 70, 83), rgb(155, 155, 248));
+  margin-top: 4rem;
+  padding: 1rem;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: black;
+  transition: background-color 0.3s;
+}
+
+.footer-text {
+  text-align: center;
+}
+
+.footer a:hover {
+  background-color: rgb(230, 230, 230);
+}
+
+/* Footerend */
