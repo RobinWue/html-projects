@@ -1,3 +1,5 @@
+/* Basic styling */
+
 *,
 *:before,
 *:after {
@@ -21,7 +23,7 @@ html {
   }
 }
 
-.body {
+body {
   margin: 0px;
 }
 
@@ -58,26 +60,41 @@ h5 {
 .main > *:first-child {
   border-top: none;
 }
+/* Basicstyling-Ende*/
+/* Navigation*/
 
-.navlinks {
-  padding: 0, 25rem 0, 50rem;
-  color: black;
-  color: blue;
+.navigation {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 768px) {
+  .navigation {
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 
 @media print {
-  .navlinks {
+  .navigation {
     display: none;
   }
 }
 
-.navlinks:hover {
-  background-color: rgb(255, 255, 255);
+.navigation a {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: black;
+  transition: background-color 0.3s;
 }
 
-.navlinks:active {
-  background-color: green;
+.navigation a:hover {
+  background-color: rgb(230, 230, 230);
 }
+
+/*Navigations-Ende*/
 
 ::selection {
   background-color: aqua;
@@ -88,26 +105,32 @@ h5 {
   content: "👨‍💻";
 }
 
-.experience-heading {
-  display: inline-block;
+.expflex {
+  display: flex;
+  flex-direction: column;
 }
 
-.experience-subheading {
-  display: inline-block;
+@media screen and (min-width: 768px) {
+  .expflex {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .article-heading {
   position: relative;
-  left: -1, 25rem;
+  left: -1.25rem;
 }
+
+/*Hire Me Knopf */
 
 .hire-me {
   position: absolute;
   top: 0rem;
   right: 0rem;
-  border: 0, 3rem solid black;
+  border: 0.2rem solid black;
   background-color: tomato;
-  padding: 0, 3rem;
+  padding: 0.3rem;
 }
 
 @media screen and (min-width: 992px) {
@@ -121,6 +144,8 @@ h5 {
     display: none;
   }
 }
+
+/*Hire Me Knopf Ende*/
 
 .article {
   padding-left: 4.125rem;
