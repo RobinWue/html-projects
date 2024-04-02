@@ -1,5 +1,4 @@
 /* Basic styling */
-
 *,
 *:before,
 *:after {
@@ -24,7 +23,31 @@ html {
 }
 
 body {
-  margin: 0px;
+  --background-color: rgb(255, 255, 255);
+  --text-color: black;
+  --accent-color: rgb(9, 77, 104);
+  --accent-text-color: black;
+  --nav-link-active-bg-color: rgb(113, 179, 241);
+  --selection-bg-color: rgb(33, 105, 105);
+  --selection-text-color: rgb(226, 230, 236);
+  --hire-me-bg-color: rgb(148, 173, 255);
+
+  margin: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+*::selection {
+  background-color: var(--selection-bg-color);
+  color: var(--selection-text-color);
+}
+
+a,
+a:link,
+a:hover,
+a:visited,
+a:active {
+  color: var(--text-color);
 }
 
 h1,
@@ -32,16 +55,20 @@ h2,
 h3,
 h4,
 h5,
-h5 {
+h6 {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .header {
-  padding: 1rem 1rem;
+  padding: 1rem 1rem 4rem;
   text-align: center;
-  _background-color: rgb(38, 70, 83);
-  padding-top: 4rem;
-  background: linear-gradient(to right, rgb(38, 70, 83), rgb(155, 155, 248));
+  background-image: linear-gradient(
+    235deg,
+    var(--background-color),
+    var(--accent-color)
+  );
+  position: relative;
+  color: var(--accent-text-color);
 }
 
 .main {
@@ -55,15 +82,15 @@ h5 {
 }
 
 .main > * {
-  border-top: 1rem solid rgb(38, 70, 83);
+  border-top: 1rem solid var(--accent-color);
+  padding: 0 1rem;
 }
 
 .main > *:first-child {
   border-top: none;
 }
-/* Basicstyling-Ende*/
-/* Navigation*/
 
+/* Navigation */
 .navigation {
   align-items: center;
   display: flex;
@@ -87,50 +114,22 @@ h5 {
 .navigation a {
   padding: 10px 20px;
   text-decoration: none;
-  color: black;
+  color: var(--accent-text-color);
   transition: background-color 0.3s;
 }
 
 .navigation a:hover {
-  background-color: rgb(230, 230, 230);
+  background-color: var(--accent-color);
+  color: var(--accent-text-color);
 }
 
-/*Navigations-Ende*/
-
-::selection {
-  background-color: rgb(33, 105, 105);
-  color: rgb(226, 230, 236);
-}
-
-.profession::after {
-  content: "👨‍💻";
-}
-
-.expflex {
-  display: flex;
-  flex-direction: column;
-}
-
-@media screen and (min-width: 768px) {
-  .expflex {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
-
-.article-heading {
-  position: relative;
-  left: -1.25rem;
-}
-
-/*Hire Me Knopf */
-
+/* Hire Me Button */
 .hire-me {
   position: absolute;
-  top: 0rem;
-  right: 0rem;
-  border: 0.2rem solid black;
-  background-color: rgb(148, 173, 255);
+  top: 0;
+  right: 0;
+  border: 0.2rem solid var(--text-color);
+  background-color: var(--hire-me-bg-color);
   padding: 0.3rem;
 }
 
@@ -146,32 +145,20 @@ h5 {
   }
 }
 
-/*Hire Me Knopf Ende*/
-
-.article {
-  padding-left: 4.125rem;
-  padding-right: 4.125rem;
-}
-
-.heading {
-  font-size: 1em;
-}
-
-.main-header {
-  font-size: 4rem;
-}
-
-/*Footer*/
-
+/* Footer */
 .footer {
-  background: linear-gradient(to right, rgb(38, 70, 83), rgb(155, 155, 248));
+  background: linear-gradient(
+    to right,
+    var(--background-color),
+    rgb(155, 155, 248)
+  );
   margin-top: 4rem;
   padding: 1rem;
 }
 
 .footer-link {
   text-decoration: underline;
-  color: black;
+  color: var(--text-color);
   transition: background-color 0.3s;
 }
 
@@ -180,7 +167,23 @@ h5 {
 }
 
 .footer a:hover {
-  background-color: rgb(230, 230, 230);
+  background-color: var(--accent-color);
 }
 
-/* Footerend */
+/* Media Query for Dark Mode Preferences */
+@media screen and (prefers-color-scheme: dark) {
+  body {
+    --background-color: black;
+    --text-color: white;
+    --accent-color: rgb(23, 162, 184);
+    --accent-text-color: white;
+    --nav-link-active-bg-color: rgb(52, 58, 64);
+    --selection-bg-color: rgb(33, 37, 41);
+    --selection-text-color: rgb(248, 249, 250);
+    --hire-me-bg-color: rgb(108, 117, 125);
+  }
+
+  .footer {
+    background: linear-gradient(to right, black, rgb(108, 117, 125));
+  }
+}
