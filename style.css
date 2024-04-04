@@ -123,14 +123,27 @@ h6 {
   color: var(--accent-text-color);
 }
 
-/* Hire Me Button */
+.navigation:focus {
+  background-color: var(--accent-color);
+  outline-color: var(--accent-text-color);
+  outline-style: dotted;
+}
+
+.header:hover .hire-me,
+.header:focus-within .hire-me {
+  opacity: 1;
+  transform: scale(1.5);
+}
+
 .hire-me {
   position: absolute;
-  top: 0;
-  right: 0;
-  border: 0.2rem solid var(--text-color);
-  background-color: var(--hire-me-bg-color);
-  padding: 0.3rem;
+  right: 1rem;
+  top: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  background: var(--accent-color);
+  color: var(--background-color);
+  transition: 0.25s;
 }
 
 @media screen and (min-width: 992px) {
