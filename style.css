@@ -90,6 +90,22 @@ h6 {
   border-top: none;
 }
 
+.main-article {
+  display: grid;
+}
+
+@media screen and (min-width: 768px) {
+  .main-article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+.main-article > * {
+  padding: 0;
+}
+
 /* Navigation */
 .navigation {
   align-items: center;
